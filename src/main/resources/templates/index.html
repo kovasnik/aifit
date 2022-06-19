@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aifit</title>
+    <link rel="stylesheet" href="pages/index-page/css/index.css">
+    <link type="image/x-icon" rel="shortcut icon" href="favicons/favicon.ico">
+    <link type="image/png" sizes="16x16" rel="icon" href="favicons/favicon-16x16.png">
+    <link type="image/png" sizes="32x32" rel="icon" href="favicons/favicon-32x32.png">
+    <link type="image/png" sizes="96x96" rel="icon" href="favicons/favicon-96x96.png">
+    <link type="image/png" sizes="120x120" rel="icon" href="favicons/favicon-120x120.png">
+    <link type="image/png" sizes="72x72" rel="icon" href="favicons/android-icon-72x72.png">
+    <link type="image/png" sizes="96x96" rel="icon" href="favicons/android-icon-96x96.png">
+    <link type="image/png" sizes="144x144" rel="icon" href="favicons/android-icon-144x144.png">
+    <link type="image/png" sizes="192x192" rel="icon" href="favicons/android-icon-192x192.png">
+    <link type="image/png" sizes="512x512" rel="icon" href="favicons/android-icon-512x512.png">
+    <link sizes="57x57" rel="apple-touch-icon" href="favicons/apple-touch-icon-57x57.png">
+    <link sizes="60x60" rel="apple-touch-icon" href="favicons/apple-touch-icon-60x60.png">
+    <link sizes="72x72" rel="apple-touch-icon" href="favicons/apple-touch-icon-72x72.png">
+    <link sizes="76x76" rel="apple-touch-icon" href="favicons/apple-touch-icon-76x76.png">
+    <link sizes="114x114" rel="apple-touch-icon" href="favicons/apple-touch-icon-114x114.png">
+    <link sizes="120x120" rel="apple-touch-icon" href="favicons/apple-touch-icon-120x120.png">
+    <link sizes="144x144" rel="apple-touch-icon" href="favicons/apple-touch-icon-144x144.png">
+    <link sizes="152x152" rel="apple-touch-icon" href="favicons/apple-touch-icon-152x152.png">
+    <link sizes="180x180" rel="apple-touch-icon" href="favicons/apple-touch-icon-180x180.png">
+    <link color="#e52037" rel="mask-icon" href="favicons/safari-pinned-tab.svg">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
+    <meta name="msapplication-square70x70logo" content="favicons/mstile-70x70.png">
+    <meta name="msapplication-square150x150logo" content="favicons/mstile-150x150.png">
+    <meta name="msapplication-wide310x150logo" content="favicons/mstile-310x310.png">
+    <meta name="msapplication-square310x310logo" content="favicons/mstile-310x150.png">
+    <meta name="application-name" content="My Application">
+    <meta name="msapplication-config" content="favicons/browserconfig.xml">
+</head>
+
+<body>
+    <section class="login-form-modal hidden modal-window">
+        <form class="form login-form-wrapper">
+            <p class="form__title">ВОЙТИ В АККАУНТ</p>
+            <input type="text" class="input form__input" placeholder="НИК" data-type-nick>
+            <input type="text" class="input form__input" placeholder="ПАРОЛЬ" data-type-password>
+            <button class="button button_longer form__button_longer" data-button-submit>ВОЙТИ</button>
+            <button class="form__close-button" data-toggle-form="login-form">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M19.4842 14.9995L29.071 5.41304C30.3097 4.17445 30.3097 2.16753 29.071 0.928942C27.8324 -0.309647 25.8254 -0.309647 24.5868 0.928942L15 10.5164L5.41323 0.93002C4.1746 -0.308569 2.16761 -0.308569 0.928975 0.93002C-0.309658 2.16861 -0.309658 4.17553 0.928975 5.41411L10.5157 15.0005L0.928975 24.587C-0.309658 25.8256 -0.309658 27.8325 0.928975 29.071C2.16761 30.3097 4.1746 30.3097 5.41323 29.071L15 19.4846L24.5868 29.071C25.8254 30.3097 27.8324 30.3097 29.071 29.071C30.3097 27.8324 30.3097 25.8255 29.071 24.587L19.4842 14.9995Z" />
+                </svg>
+            </button>
+            <div class="form__error-block" data-form-error></div>
+            <div class="form__background form__background_left"></div>
+            <div class="form__background form__background_right"></div>
+        </form>
+    </section>
+    <section class="register-form-modal hidden modal-window">
+        <form class="form register-form-wrapper">
+            <p class="form__title">ЗАРЕГИСТРИРОВАТЬСЯ</p>
+            <input type="text" class="input form__input" placeholder="НИК" data-type-nick>
+            <input type="password" class="input form__input" placeholder="ПАРОЛЬ" data-type-password>
+            <input type="password" class="input form__input" placeholder="ПОВТОРИТЕ ПАРОЛЬ" data-type-password-confirm>
+            <input type="text" class="input form__input" placeholder="ВОЗРАСТ" data-type-age>
+            <div class="form__checkbox-block" data-checkbox-sex>
+                <button class="form__checkbox-button" data-checkbox-option>
+                    <span class="form__circle-external">
+                        <span class="form__circle-inner"></span>
+                    </span>
+                    <p class="form__text">МУЖЧИНА</p>
+                </button>
+                <button class="form__checkbox-button" data-checkbox-option>
+                    <span class="form__circle-external">
+                        <span class="form__circle-inner"></span>
+                    </span>
+                    <p class="form__text">ЖЕНЩИНА</p>
+                </button>
+            </div>
+            <button class="button button_longer form__button_longer" data-button-submit>ЗАРЕГИСТРИРОВАТЬСЯ</button>
+            <button class="form__close-button" data-toggle-form="register-form">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M19.4842 14.9995L29.071 5.41304C30.3097 4.17445 30.3097 2.16753 29.071 0.928942C27.8324 -0.309647 25.8254 -0.309647 24.5868 0.928942L15 10.5164L5.41323 0.93002C4.1746 -0.308569 2.16761 -0.308569 0.928975 0.93002C-0.309658 2.16861 -0.309658 4.17553 0.928975 5.41411L10.5157 15.0005L0.928975 24.587C-0.309658 25.8256 -0.309658 27.8325 0.928975 29.071C2.16761 30.3097 4.1746 30.3097 5.41323 29.071L15 19.4846L24.5868 29.071C25.8254 30.3097 27.8324 30.3097 29.071 29.071C30.3097 27.8324 30.3097 25.8255 29.071 24.587L19.4842 14.9995Z" />
+                </svg>
+            </button>
+            <div class="form__error-block" data-form-error></div>
+            <div class="form__background form__background_left"></div>
+            <div class="form__background form__background_right"></div>
+        </form>
+    </section>
+    <section class="logo-and-login-wrapper container">
+        <a href="#" class="logo-and-login-wrapper__logo-link">
+            <img src="scss-blocks/logo-and-login/svg/logo.svg" alt="aifit">
+        </a>
+        <button class="button logo-and-login-wrapper__button" data-toggle-form="login-form">
+            ВОЙТИ
+        </button>
+    </section>
+    <header class="header-slider-wrapper">
+        <div class="header-slider-wrapper__slider-container">
+            <div class="header-slider-wrapper__slider swiper-wrapper">
+                <div class="header-slider-wrapper__slide header-slider-wrapper__slide_1 swiper-slide">
+                    <p class="title-white header-slider-wrapper__title-white">
+                        ОТСЛЕЖИВАЙТЕ ВЕC<br>И ТРЕНИРОВКИ
+                    </p>
+                </div>
+                <div class="header-slider-wrapper__slide header-slider-wrapper__slide_2 swiper-slide">
+                    <p class="title-white header-slider-wrapper__title-white">
+                        ДОБАВЛЯЙТЕ СВОИ<br>ТРЕНИРОВКИ
+                    </p>
+                </div>
+                <div class="header-slider-wrapper__slide header-slider-wrapper__slide_3 swiper-slide">
+                    <p class="title-white header-slider-wrapper__title-white">
+                        РАССЧИТЫВАЙТЕ КАЛОРИИ<br>ПРИ БЕГЕ
+                    </p>
+                </div>
+                <div class="header-slider-wrapper__slide header-slider-wrapper__slide_4 swiper-slide">
+                    <p class="title-white header-slider-wrapper__title-white">
+                        РАССЧИТЫВАЙТЕ КАЛОРИИ<br>ПРИ ВЕЛОЕЗДЕ
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="header-slider-wrapper__pagination-block"></div>
+    </header>
+    <main class="opportunities-wrapper container">
+        <div class="opportunities-wrapper__content-block">
+            <div class="opportunities-wrapper__img-block opportunities-wrapper__img-block_top">
+                <div class="opportunities-wrapper__rectangle opportunities-wrapper__rectangle_blue"></div>
+                <img src="scss-blocks/opportunities/img/opportunities-1.png" alt="Girl is doing yoga">
+            </div>
+            <p class="text opportunities-wrapper__text">
+                Начинайте жить здоровой<br>жизнью с aifit
+            </p>
+        </div>
+        <div class="opportunities-wrapper__content-block">
+            <p class="text opportunities-wrapper__text">
+                Самый быстрый способ<br>подсчета калорий
+            </p>
+            <div class="opportunities-wrapper__img-block opportunities-wrapper__img-block_bottom">
+                <div class="opportunities-wrapper__rectangle opportunities-wrapper__rectangle_purple"></div>
+                <img src="scss-blocks/opportunities/img/opportunities-2.png" alt="Jock">
+            </div>
+        </div>
+    </main>
+    <article class="registration-banner-wrapper container">
+        <p class="title-white title-white_smaller registration-banner-wrapper__title-white_smaller">
+            НАЧАТЬ ОТСЛЕЖИВАТЬ КАЛОРИИ?
+        </p>
+        <button class="button button_big registration-banner-wrapper__button_big" data-toggle-form="register-form">
+            ЗАРЕГИСТРИРОВАТЬСЯ
+        </button>
+    </article>
+    <footer class="footer-wrapper container">
+        <a href="#" class="footer-wrapper__logo-link">
+            <img src="scss-blocks/footer/svg/logo.svg" alt="aifit">
+        </a>
+        <button class="button footer-wrapper__button" data-toggle-form="login-form">
+            ВОЙТИ
+        </button>
+        <div class="footer-wrapper__text-block">
+            <p class="footer-wrapper__text">
+                © 2022 aifit | Все права защищены
+            </p>
+            <p class="footer-wrapper__text">
+                Богачик Е.Ф. | Харкевич Л.В.
+            </p>
+        </div>
+    </footer>
+    <script src="js-libs/swiper/swiper-bundle.min.js"></script>
+    <script src="js-libs/modals.js"></script>
+    <script src="scss-blocks/header-slider/js/header-slider.js"></script>
+    <script src="scss-blocks/register-form/js/register-form.js"></script>
+    <script src="scss-blocks/login-form/js/_login-form.js"></script>
+</body>
+
+</html>
